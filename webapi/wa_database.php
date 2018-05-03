@@ -13,10 +13,15 @@ $mysqli = new mysqli($server, $username, $password, $db);
 if ($mysqli->connect_errno) {
 		echo "Connessione fallita: ". $mysqli->connect_error . ".";
 		exit();
-} else {
-		echo "Connected.";
 }
 
-echo getenv("CLEARDB_DATABASE_URL")
+$query = "SELECT * FROM lista_comuni";
+
+$res = $mysqli->query($query);
+
+while($row = $res->fetch_array(MYSQL_ASSOC)){
+	echo $row['CodFisico'];
+}
+
 
 ?>
