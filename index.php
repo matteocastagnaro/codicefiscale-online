@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    
+
 <?}?>
 
 <div style="margin-top: 50px; float: left; width: 100%;"></div>
@@ -110,7 +110,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-            
+
             <form role="form" method="post" action="./webapi/wa_calcolacf.php">
               <div class="form-group">
                 <label for="cognome">COGNOME</label>
@@ -170,12 +170,12 @@
 
                         $res = $mysqli->query($query);
 
-                        while($row = $res->fetch_array(MYSQL_ASSOC)){?>
+                        while($row = $res->fetch_array()){?>
                             <option value="<?echo $row['CodFisico']?>"><?echo $row['Comune']?> (<?echo $row['Provincia']?>)</option>
                         <?}?>
                 </select>
-                
-                
+
+
                 <div style="margin-top: 30px; float: left; width: 100%;"></div>
 
               <button type="submit" class="btn btn-primary wow tada">Calcola <i class="fa fa-fw fa-gavel"></i></button>

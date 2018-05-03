@@ -15,18 +15,4 @@ if ($mysqli->connect_errno) {
 		exit();
 }
 
-$query = "SELECT * FROM lista_comuni";
-
-$result = $mysqli->query($query);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["CodFisico"].;
-    }
-} else {
-    echo "0 results";
-}
-
-
 ?>
