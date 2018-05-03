@@ -13,6 +13,8 @@ $mysqli = new mysqli($server, $username, $password, $db);
 if ($mysqli->connect_errno) {
 		echo "Connessione fallita: ". $mysqli->connect_error . ".";
 		exit();
+} else {
+		echo "Connected.";
 }
 
 echo getenv("CLEARDB_DATABASE_URL")
