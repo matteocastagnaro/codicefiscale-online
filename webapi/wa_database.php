@@ -17,12 +17,15 @@ if ($mysqli->connect_errno) {
 
 $query = "SELECT * FROM lista_comuni";
 
-$res = $mysqli->query($query);
+$result = $mysqli->query($query);
 
-echo $res
-
-while($row = $res->fetch_array(MYSQL_ASSOC)){
-	echo $row['CodFisico'];
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["CodFisico"].;
+    }
+} else {
+    echo "0 results";
 }
 
 
