@@ -15,6 +15,6 @@ if ($mysqli->connect_errno) {
 		exit();
 }
 
-echo $url
+echo getenv("CLEARDB_DATABASE_URL")
 
 ?>
