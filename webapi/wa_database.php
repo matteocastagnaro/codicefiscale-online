@@ -15,6 +15,6 @@ if ($mysqli->connect_errno) {
 		exit();
 }
 
-echo $server + " - " + $username + " - " + $db
+echo $url
 
 ?>
