@@ -19,6 +19,8 @@ $query = "SELECT * FROM lista_comuni";
 
 $res = $mysqli->query($query);
 
+echo $res
+
 while($row = $res->fetch_array(MYSQL_ASSOC)){
 	echo $row['CodFisico'];
 }
